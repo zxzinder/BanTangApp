@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  BTTabBarController.h
 //  BTApp
 //
 //  Created by MacMini on 16/3/22.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface BTTabBarController : UITabBarController
 
 @end
-

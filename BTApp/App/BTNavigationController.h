@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  BTNavigationController.h
 //  BTApp
 //
 //  Created by MacMini on 16/3/22.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface BTNavigationController : UINavigationController
 
 @end
-
