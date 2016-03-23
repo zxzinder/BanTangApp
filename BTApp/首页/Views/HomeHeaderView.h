@@ -15,6 +15,7 @@
 
 @property (nonatomic, strong) NSArray *ads;
 
+
 -(void)startAudoScroll;
 
 -(void)endAutoScroll;

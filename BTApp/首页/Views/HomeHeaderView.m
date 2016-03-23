@@ -9,13 +9,14 @@
 #import "HomeHeaderView.h"
 #import "BTHomeBanner.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "BTHomePageCollectionViewCell.h"
 
 typedef NS_ENUM(NSUInteger, BBCustomBusAdViewScrollDirection) {
     BBCustomBusAdViewLeft,  //界面朝左划
     BBCustomBusAdViewRight
 };
 
-@interface HomeHeaderView()
+@interface HomeHeaderView()<UIScrollViewDelegate>
 {
     NSMutableArray *buttons;
     NSInteger index;
@@ -54,24 +55,43 @@ typedef NS_ENUM(NSUInteger, BBCustomBusAdViewScrollDirection) {
             btn.tag = i;
 //            [btn addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
             [btn sd_setImageWithURL:[NSURL URLWithString:ad.photo] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@""]];
-            [btn sd_setImageWithURL:[NSURL URLWithString:ad.photo] forState:UIControlStateHighlighted placeholderImage:[UIImage imageNamed:@""]];
+//            [btn sd_setImageWithURL:[NSURL URLWithString:ad.photo] forState:UIControlStateHighlighted placeholderImage:[UIImage imageNamed:@""]];
             [_scrollView addSubview:btn];
             [buttons addObject:btn];
         }
        
-        _scrollView.contentSize = CGSizeMake(self.frame.size.width * _ads.count, self.frame.size.height);
+        _scrollView.contentSize = CGSizeMake(self.frame.size.width * _ads.count, 0);
         _scrollView.contentOffset = CGPointZero;
+
+        _scrollView.delegate = self;
         _pageControl.numberOfPages = _ads.count;
         _pageControl.currentPage = 0;
         //_pageControlWidthConstraint.constant = [_pageControl sizeForNumberOfPages:_ads.count].width;
     }
 }
 
+#pragma mark scrollView
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if (scrollView.contentOffset.x < 0) {
+        [self adjustViewsForInfiniteScrollAtDirection:BBCustomBusAdViewRight];
+    } else if (scrollView.contentOffset.x > scrollView.contentSize.width - scrollView.frame.size.width && scrollView.contentOffset.x > 0) {
+        [self adjustViewsForInfiniteScrollAtDirection:BBCustomBusAdViewLeft];
+    }
+    for (UIView *view in scrollView.subviews) {
+        if (view.frame.origin.x == _scrollView.contentOffset.x) {
+            index = view.tag;
+            _pageControl.currentPage = index;
+         
+            break;
+        }
+    }
+}
 #pragma mark scroll
 -(void)startAudoScroll{
     
     if (!timer && _ads.count) {
-        timer = [NSTimer timerWithTimeInterval:5 target:self selector:@selector(scroll) userInfo:nil repeats:YES];
+        timer = [NSTimer timerWithTimeInterval:5 target:self selector:@selector(viewscroll) userInfo:nil repeats:YES];
         [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
     }
     
@@ -86,7 +106,7 @@ typedef NS_ENUM(NSUInteger, BBCustomBusAdViewScrollDirection) {
     
 }
 
-- (void)scroll
+- (void)viewscroll
 {
     index = (index + 1)%_ads.count;
     _pageControl.currentPage = index;
@@ -127,4 +147,10 @@ typedef NS_ENUM(NSUInteger, BBCustomBusAdViewScrollDirection) {
         _scrollView.contentOffset = CGPointMake(_scrollView.contentOffset.x + _scrollView.frame.size.width, 0);
     }
 }
+
+
+
+
+
+
 @end

@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HomeHeaderView.h"
+#import "BTHomeMidView.h"
 
 @interface HomeViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet HomeHeaderView *headerView;
+@property (weak, nonatomic) IBOutlet BTHomeMidView *midView;
 
 @end
