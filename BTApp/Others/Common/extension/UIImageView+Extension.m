@@ -12,7 +12,7 @@
 
 - (void)fadeImageWithUrl:(NSString *)url
 {
-    [self yy_setImageWithURL:[NSURL URLWithString:url]
+    [self yy_setImageWithURL:[NSURL URLWithString:url]//default_image
                  placeholder:[UIImage imageNamed:@"default_image"]
                      options:YYWebImageOptionSetImageWithFadeAnimation | YYWebImageOptionProgressiveBlur |YYWebImageOptionShowNetworkActivity
                   completion:nil];

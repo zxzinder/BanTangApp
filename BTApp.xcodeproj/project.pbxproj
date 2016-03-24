@@ -30,6 +30,8 @@
 		9A91C9221CA142880055E8C0 /* BTHomeTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A91C91F1CA142880055E8C0 /* BTHomeTopic.m */; };
 		9A988AC01CA283130004988A /* BTHomePageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A988ABF1CA283130004988A /* BTHomePageCollectionViewCell.m */; };
 		9A988AC31CA2952D0004988A /* BTHomeMidView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A988AC21CA2952D0004988A /* BTHomeMidView.m */; };
+		9AB07D3F1CA3BBE500C5F7EC /* BTHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB07D3E1CA3BBE400C5F7EC /* BTHomeTableViewCell.m */; };
+		9AB07D441CA3D19B00C5F7EC /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB07D431CA3D19B00C5F7EC /* UINavigationBar+Awesome.m */; };
 		CFC64E2F1CA17BED0002C3DF /* BTCategoryElement.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC64E2A1CA17BED0002C3DF /* BTCategoryElement.m */; };
 		CFC64E301CA17BED0002C3DF /* BTEntryList.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC64E2C1CA17BED0002C3DF /* BTEntryList.m */; };
 		CFC64E311CA17BED0002C3DF /* BTFirstpageElement.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC64E2E1CA17BED0002C3DF /* BTFirstpageElement.m */; };
@@ -115,6 +117,10 @@
 		9A988ABF1CA283130004988A /* BTHomePageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTHomePageCollectionViewCell.m; sourceTree = "<group>"; };
 		9A988AC11CA2952D0004988A /* BTHomeMidView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTHomeMidView.h; sourceTree = "<group>"; };
 		9A988AC21CA2952D0004988A /* BTHomeMidView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTHomeMidView.m; sourceTree = "<group>"; };
+		9AB07D3D1CA3BBE400C5F7EC /* BTHomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTHomeTableViewCell.h; sourceTree = "<group>"; };
+		9AB07D3E1CA3BBE400C5F7EC /* BTHomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTHomeTableViewCell.m; sourceTree = "<group>"; };
+		9AB07D421CA3D19B00C5F7EC /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
+		9AB07D431CA3D19B00C5F7EC /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
 		CFC64E291CA17BED0002C3DF /* BTCategoryElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCategoryElement.h; sourceTree = "<group>"; };
 		CFC64E2A1CA17BED0002C3DF /* BTCategoryElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCategoryElement.m; sourceTree = "<group>"; };
 		CFC64E2B1CA17BED0002C3DF /* BTEntryList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTEntryList.h; sourceTree = "<group>"; };
@@ -368,6 +374,8 @@
 				9A988ABF1CA283130004988A /* BTHomePageCollectionViewCell.m */,
 				9A988AC11CA2952D0004988A /* BTHomeMidView.h */,
 				9A988AC21CA2952D0004988A /* BTHomeMidView.m */,
+				9AB07D3D1CA3BBE400C5F7EC /* BTHomeTableViewCell.h */,
+				9AB07D3E1CA3BBE400C5F7EC /* BTHomeTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -384,6 +392,7 @@
 		9A91C9071CA1415A0055E8C0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9AB07D401CA3D19B00C5F7EC /* Utitls */,
 				9A91C90C1CA141D70055E8C0 /* extension */,
 				9A91C9081CA141D00055E8C0 /* BTConst.h */,
 				9A91C9091CA141D00055E8C0 /* BTConst.m */,
@@ -406,6 +415,23 @@
 				9A91C9151CA141D70055E8C0 /* UILabel+Extension.m */,
 			);
 			path = extension;
+			sourceTree = "<group>";
+		};
+		9AB07D401CA3D19B00C5F7EC /* Utitls */ = {
+			isa = PBXGroup;
+			children = (
+				9AB07D411CA3D19B00C5F7EC /* NavigationBar */,
+			);
+			path = Utitls;
+			sourceTree = "<group>";
+		};
+		9AB07D411CA3D19B00C5F7EC /* NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				9AB07D421CA3D19B00C5F7EC /* UINavigationBar+Awesome.h */,
+				9AB07D431CA3D19B00C5F7EC /* UINavigationBar+Awesome.m */,
+			);
+			path = NavigationBar;
 			sourceTree = "<group>";
 		};
 		9B8CED39B9523F5F8113BFF1 /* Pods */ = {
@@ -617,6 +643,8 @@
 				9A91C9021CA139C20055E8C0 /* HomeHeaderView.m in Sources */,
 				9A91C8EB1CA0E48D0055E8C0 /* main.m in Sources */,
 				CFC64E411CA17E230002C3DF /* BTListPost.m in Sources */,
+				9AB07D3F1CA3BBE500C5F7EC /* BTHomeTableViewCell.m in Sources */,
+				9AB07D441CA3D19B00C5F7EC /* UINavigationBar+Awesome.m in Sources */,
 				CFC64E301CA17BED0002C3DF /* BTEntryList.m in Sources */,
 				9A988AC01CA283130004988A /* BTHomePageCollectionViewCell.m in Sources */,
 				9A91C9211CA142880055E8C0 /* BTHomePageData.m in Sources */,

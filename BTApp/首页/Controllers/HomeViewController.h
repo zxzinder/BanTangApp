@@ -14,5 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet HomeHeaderView *headerView;
 @property (weak, nonatomic) IBOutlet BTHomeMidView *midView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
