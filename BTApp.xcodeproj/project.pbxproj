@@ -32,6 +32,9 @@
 		9A988AC31CA2952D0004988A /* BTHomeMidView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A988AC21CA2952D0004988A /* BTHomeMidView.m */; };
 		9AB07D3F1CA3BBE500C5F7EC /* BTHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB07D3E1CA3BBE400C5F7EC /* BTHomeTableViewCell.m */; };
 		9AB07D441CA3D19B00C5F7EC /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB07D431CA3D19B00C5F7EC /* UINavigationBar+Awesome.m */; };
+		9ABC8F851CBDEA7C00C82C8A /* Mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 9ABC8F801CBDEA7C00C82C8A /* Mask.png */; };
+		9ABC8F861CBDEA7C00C82C8A /* PullToRefreshCoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ABC8F821CBDEA7C00C82C8A /* PullToRefreshCoreTextView.m */; };
+		9ABC8F871CBDEA7C00C82C8A /* UIScrollView+PullToRefreshCoreText.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ABC8F841CBDEA7C00C82C8A /* UIScrollView+PullToRefreshCoreText.m */; };
 		CFC64E2F1CA17BED0002C3DF /* BTCategoryElement.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC64E2A1CA17BED0002C3DF /* BTCategoryElement.m */; };
 		CFC64E301CA17BED0002C3DF /* BTEntryList.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC64E2C1CA17BED0002C3DF /* BTEntryList.m */; };
 		CFC64E311CA17BED0002C3DF /* BTFirstpageElement.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC64E2E1CA17BED0002C3DF /* BTFirstpageElement.m */; };
@@ -121,6 +124,11 @@
 		9AB07D3E1CA3BBE400C5F7EC /* BTHomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTHomeTableViewCell.m; sourceTree = "<group>"; };
 		9AB07D421CA3D19B00C5F7EC /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
 		9AB07D431CA3D19B00C5F7EC /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
+		9ABC8F801CBDEA7C00C82C8A /* Mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mask.png; sourceTree = "<group>"; };
+		9ABC8F811CBDEA7C00C82C8A /* PullToRefreshCoreTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullToRefreshCoreTextView.h; sourceTree = "<group>"; };
+		9ABC8F821CBDEA7C00C82C8A /* PullToRefreshCoreTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullToRefreshCoreTextView.m; sourceTree = "<group>"; };
+		9ABC8F831CBDEA7C00C82C8A /* UIScrollView+PullToRefreshCoreText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+PullToRefreshCoreText.h"; sourceTree = "<group>"; };
+		9ABC8F841CBDEA7C00C82C8A /* UIScrollView+PullToRefreshCoreText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+PullToRefreshCoreText.m"; sourceTree = "<group>"; };
 		CFC64E291CA17BED0002C3DF /* BTCategoryElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCategoryElement.h; sourceTree = "<group>"; };
 		CFC64E2A1CA17BED0002C3DF /* BTCategoryElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCategoryElement.m; sourceTree = "<group>"; };
 		CFC64E2B1CA17BED0002C3DF /* BTEntryList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTEntryList.h; sourceTree = "<group>"; };
@@ -420,6 +428,7 @@
 		9AB07D401CA3D19B00C5F7EC /* Utitls */ = {
 			isa = PBXGroup;
 			children = (
+				9ABC8F7F1CBDEA7C00C82C8A /* PullToRefreshCoreText */,
 				9AB07D411CA3D19B00C5F7EC /* NavigationBar */,
 			);
 			path = Utitls;
@@ -432,6 +441,18 @@
 				9AB07D431CA3D19B00C5F7EC /* UINavigationBar+Awesome.m */,
 			);
 			path = NavigationBar;
+			sourceTree = "<group>";
+		};
+		9ABC8F7F1CBDEA7C00C82C8A /* PullToRefreshCoreText */ = {
+			isa = PBXGroup;
+			children = (
+				9ABC8F801CBDEA7C00C82C8A /* Mask.png */,
+				9ABC8F811CBDEA7C00C82C8A /* PullToRefreshCoreTextView.h */,
+				9ABC8F821CBDEA7C00C82C8A /* PullToRefreshCoreTextView.m */,
+				9ABC8F831CBDEA7C00C82C8A /* UIScrollView+PullToRefreshCoreText.h */,
+				9ABC8F841CBDEA7C00C82C8A /* UIScrollView+PullToRefreshCoreText.m */,
+			);
+			path = PullToRefreshCoreText;
 			sourceTree = "<group>";
 		};
 		9B8CED39B9523F5F8113BFF1 /* Pods */ = {
@@ -551,6 +572,7 @@
 			files = (
 				9A91C8C31CA0E4680055E8C0 /* LaunchScreen.storyboard in Resources */,
 				9A91C8C01CA0E4680055E8C0 /* Assets.xcassets in Resources */,
+				9ABC8F851CBDEA7C00C82C8A /* Mask.png in Resources */,
 				9A91C8BE1CA0E4680055E8C0 /* Main.storyboard in Resources */,
 				9A91C8F61CA0EBBE0055E8C0 /* Home.storyboard in Resources */,
 			);
@@ -628,6 +650,7 @@
 				CFC64E521CA17EB00002C3DF /* BTListPostPics.m in Sources */,
 				9A91C9191CA141D70055E8C0 /* UILabel+Extension.m in Sources */,
 				CFC64E421CA17E230002C3DF /* BTSubscribeTag.m in Sources */,
+				9ABC8F871CBDEA7C00C82C8A /* UIScrollView+PullToRefreshCoreText.m in Sources */,
 				9A91C8EA1CA0E48D0055E8C0 /* AppDelegate.m in Sources */,
 				9A988AC31CA2952D0004988A /* BTHomeMidView.m in Sources */,
 				9A91C9171CA141D70055E8C0 /* UIImage+bt_extension.m in Sources */,
@@ -637,6 +660,7 @@
 				CFC64E4E1CA17E8F0002C3DF /* BTSubjectAuthor.m in Sources */,
 				9A91C90B1CA141D00055E8C0 /* BTConst.m in Sources */,
 				9A91C9221CA142880055E8C0 /* BTHomeTopic.m in Sources */,
+				9ABC8F861CBDEA7C00C82C8A /* PullToRefreshCoreTextView.m in Sources */,
 				CFC64E4C1CA17E8F0002C3DF /* BTListPostDynamic.m in Sources */,
 				9A91C9061CA141180055E8C0 /* BTHomePageManager.m in Sources */,
 				9A91C8EF1CA0E4B40055E8C0 /* BTTabBarController.m in Sources */,

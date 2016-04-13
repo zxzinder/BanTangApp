@@ -13,6 +13,7 @@
 #import "BTHomeBanner.h"
 #import "BTHomeTableViewCell.h"
 #import "UINavigationBar+Awesome.h"
+#import "UIScrollView+PullToRefreshCoreText.h"
 
 #define NAVBAR_CHANGE_POINT 50
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -78,7 +79,8 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
+   // MJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(getData)];
+    
     [self setupViews];
     [self getData];
     // Do any additional setup after loading the view.
@@ -99,6 +101,12 @@
     [self.navigationItem.leftBarButtonItem.customView setAlpha:0.0];
     [self.navigationItem.rightBarButtonItem.customView setAlpha:0.0];
      self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    __weak HomeViewController *weakSelf = self;
+    
+    [self.tableView addPullToRefreshWithPullText:@"C'est La Vie" pullTextColor:[UIColor colorWithHexString:@"#cb6e76"] pullTextFont:DefaultTextFont refreshingText:@"La Vie est belle" refreshingTextColor:[UIColor purpleColor] refreshingTextFont:DefaultTextFont action:^{
+        [weakSelf getData];
+    }];
    
     
 }
@@ -122,7 +130,7 @@
     __weak HomeViewController *weakSelf = self;
 
     [BTHomePageManager getHomePageDataWithPage:self.page successHandler:^(BTHomePageData *pageData) {
-  
+        [self hideLoading];
             [self.dataArray removeAllObjects];
             self.homePageData = pageData;
         for (NSDictionary *dict in pageData.banner) {
@@ -146,11 +154,16 @@
         [self.tableView reloadData];
         self.page++;
     } failureHandler:^(NSError *error) {
-      //  [self hideLoading];
+        [self hideLoading];
     }];
     
 }
-
+- (void)hideLoading
+{
+    //[self.loadingView hideAnimation];
+    [self.tableView finishLoading];
+    //[self.footerView endRefreshing];
+}
 #pragma mark UITableViewDelegate
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
